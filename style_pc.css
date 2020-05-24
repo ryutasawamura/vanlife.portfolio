@@ -1,0 +1,308 @@
+@media print, screen and (min-width: 640px) {
+
+.common-inner {
+width: 960px;
+margin: 0 auto;
+}
+
+
+/*------------------------------
+ヘッダー
+------------------------------*/
+.page-header__inner {
+  /* 後述のアスペクト比を保ちつつ、1200px * 480pxの最小サイズは保持する */
+  min-height: 480px;
+  /* 高さを画面幅の40%とすることで、アスペクト比を5:2に保つ */
+  height: 38vw;
+  background: url(https://vanlifelove.com/wp-content/uploads/2020/05/img_1129-scaled.jpg) center top no-repeat;
+  background-size: cover;
+
+  padding: 10px 400px;
+}
+
+
+
+
+/*------------------------------
+ヘッダーナビゲーション
+------------------------------*/
+.header-navigation {
+  background-color: #d2b48c;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 100px;
+}
+
+.header-navigation__list {
+  display: flex;
+}
+
+.header-navigation__list li {
+  line-height: 1.0;
+}
+
+.header-navigation__list li:not(:last-child) {
+  margin-right: 30px;
+}
+
+.header-navigation__list li a {
+  display: inline-block;
+  font-size: 1.9rem;
+  line-height: 1;
+  color: Black;
+  transition: opacity 0.2s ease 0s;
+
+  padding: 20px;
+}
+
+.header-navigation__list li a:hover {
+  opacity: 0.7;
+}
+
+
+.header-navigation__contact a {
+  display: inline-block;
+  padding: 30px 50px;
+  background-color: Black;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: #fff;
+  position: relative;
+}
+
+.header-navigation__contact a:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transition: opacity 0.2s ease 0s;
+}
+
+.header-navigation__contact a:hover:after {
+  opacity: 0.3;
+}
+
+
+
+
+
+
+/*------------------------------
+スクリーンショット
+------------------------------*/
+#stage {
+height: 70vw;
+position: relative;
+max-width:1400px;
+margin: 0 auto;
+
+}
+.pic {
+position: absolute;
+}
+.pic img {
+width: 100%;
+height: 80%;
+opacity:0;
+-moz-animation: imgTrans 40s infinite;
+-webkit-animation: imgTrans 40s ease-in infinite;
+animation: imgTrans 40s infinite;
+}
+#photo1 img {
+-moz-animation-delay: 0s;
+-webkit-animation-delay: 0s;
+animation-delay: 0s;
+}
+#photo2 img {
+-moz-animation-delay: 8s;
+-webkit-animation-delay: 8s;
+animation-delay: 8s;
+}
+#photo3 img {
+-moz-animation-delay: 16s;
+-webkit-animation-delay: 16s;
+animation-delay: 16s;
+}
+#photo4 img{
+-moz-animation-delay: 24s;
+-webkit-animation-delay: 24s;
+animation-delay: 24s;
+}
+#photo5 img {
+-moz-animation-delay: 32s;
+-webkit-animation-delay: 32s;
+animation-delay: 32s;
+}
+@-webkit-keyframes imgTrans {
+0% { opacity:0; }
+7% { opacity:1; }
+18% { opacity:1; }
+25% { opacity:0; }
+100% { opacity:0; }
+}
+@-moz-keyframes imgTrans {
+0% { opacity:0; }
+7% { opacity:1; }
+18% { opacity:1; }
+25% { opacity:0; }
+100% { opacity:0; }
+}
+@keyframes imgTrans {
+0% { opacity:0; }
+7% { opacity:1; }
+18% { opacity:1; }
+25% { opacity:0; }
+100% { opacity:0; }
+}
+
+
+
+
+
+/*------------------------------
+メイン調整
+------------------------------*/
+.main-content {
+  text-align:  center;
+}
+
+
+
+
+/*------------------------------
+セクション
+------------------------------*/
+.section {
+  padding: 100px 0;
+}
+
+.section__title,
+.section__title--white {
+  margin-bottom: 50px;
+  font-size: 3.2rem;
+  line-height: 1.0;
+  text-align: center;
+}
+
+.section__title--white {
+  color: #fff;
+}
+
+.section__text {
+  font-size: 1.6rem;
+  line-height: 2.0;
+  text-align: center;
+}
+
+#introduction {
+  background-color: #fffff3;
+}
+
+
+
+/*------------------------------
+メイン部分
+------------------------------*/
+.feature-block {
+display: flex;
+background-color: #fffff3;
+}
+
+.feature-block__image {
+width: 50%;
+}
+
+.feature-block__image img {
+width: 100%;
+height: 95%;
+object-fit: cover;
+}
+
+.feature-block__wrapper {
+width: 50%;
+padding: 20px 30px;
+box-sizing: border-box;
+}
+
+.feature-block__title {
+margin-bottom: 20px;
+font-size: 2.0rem;
+line-height: 1.75;
+}
+
+.feature-block__text {
+font-size: 1.6rem;
+line-height: 1.75;
+}
+
+.feature-list {
+width: 1100px;
+margin: 0 auto;
+padding: 50px;
+box-sizing: border-box;
+background-color: rgba(0, 0, 0, 0.3);
+}
+/* デザインを見る限り、奇数番は左、偶数番は右に文章があるので、:nth-child(even)を使う */
+.feature-list__item:nth-child(even) {
+flex-direction: row-reverse;
+}
+
+#feature {
+  background: url(https://www.pakutaso.com/shared/img/thumb/kumakichi2020A1940_TP_V.jpg) center center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+
+
+
+
+
+/*------------------------------
+ページフッター
+------------------------------*/
+.page-footer {
+display: flex;
+justify-content: flex-end;
+position: relative;
+padding: 24px 20px;
+background-color: #000;
+}
+
+.page-footer p {
+font-size: 1.2rem;
+color: #fff;
+position: absolute;
+top: 50%;
+left: 50%;
+z-index: 1;
+transform: translate(-50%, -50%);
+}
+
+.page-footer__nav ul {
+display: flex;
+}
+
+.page-footer__nav ul li {
+line-height: 1;
+}
+
+.page-footer__nav ul li:not(:last-child) {
+margin-right: 20px;
+}
+
+.page-footer__nav ul a {
+font-size: 1.2rem;
+color: #fff;
+}
+
+}
